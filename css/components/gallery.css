@@ -1,0 +1,12 @@
+.gallery-layout {
+  padding: 32px;
+}
+
+.gallery-layout img {
+  border-radius: 8px;
+  transition: scale 0.4s;
+}
+
+.gallery-layout img:hover {
+  scale: 1.3;
+}

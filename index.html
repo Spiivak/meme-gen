@@ -6,9 +6,10 @@
   <link rel="stylesheet" href="css/styles.css">
   <title>Meme Generator</title>
 </head>
-<body class="main-layout">
-  <header class="main-header flex space-between align-center full">
+<body class="main-layout" onload="onInit()">
+  <header class="main-header flex space-between align-center">
     <div class="logo flex"><img src="img/memegen-logo.png" alt="Meme Generator Logo"></div>
+    <input type="search" placeholder="Search">
     <nav class="main-nav">
       <ul class="main-nav-list flex clean-list">
         <li><a href="#">Memes</a></li>
@@ -17,13 +18,32 @@
       </ul> 
     </nav>
   </header>
-  <aside class="side-bar-nav">
-    <ul>
-      <li><a href="#">Funny</a></li>
-      <li><a href="#">Animal</a></li>
-      <li><a href="#">Men</a></li>
-      <li><a href="#">Woman</a></li>
-    </ul>
+  <aside class="main-side-bar flex justify-center">
+    <nav class="side-nav">
+      <ul class="aside-nav-list clean-list">
+        <li><a href="#">Funny</a></li>
+        <li><a href="#">Animal</a></li>
+        <li><a href="#">Men</a></li>
+        <li><a href="#">Woman</a></li>
+      </ul>
+    </nav>
   </aside>
+  <main>
+    <div class="gallery-layout gallery">
+      <img src="img/1.jpg" alt="">
+    </div>
+    <div class="canvas-container">
+      <h3 class="canvas-title"></h3>
+      <div class="canvas-object"></div>
+      <div class="canvas-actions"></div>
+    </div>
+  </main>
+  <footer class="footer-layout flex justify-center">Made without ❤️ by Eden Spivak</footer>
+
+  <script src="js/controllers/main.controller.js"></script>
+  <script src="js/services/gallery.service.js"></script>
+  <script src="js/services/meme.service.js"></script>
+  <script src="js/controllers/gallery.controller.js"></script>
+  <script src="js/controllers/meme.controller.js"></script>
 </body>
 </html>

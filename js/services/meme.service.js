@@ -18,3 +18,15 @@ var gKeywordSearchCountMap = {'funny': 12,'cat': 16, 'baby': 2}
 function getMeme() {
   return gMeme
 }
+
+function setLineText(newTxt) {
+  gMeme.lines[gMeme.selectedLineIdx].txt = newTxt
+}
+
+function setColorText(color) {
+  gMeme.lines[gMeme.selectedLineIdx].color = color
+}
+
+function setFontSize(size) {
+  gMeme.lines[gMeme.selectedLineIdx].size = size
+}

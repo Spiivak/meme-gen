@@ -9,7 +9,7 @@
 <body class="main-layout" onload="onInit()">
   <header class="main-header flex space-between align-center full">
     <div class="logo flex"><img src="assets/memegen-logo.png" alt="Meme Generator Logo"></div>
-    <input type="search" placeholder="Search">
+    <!-- <input type="search" placeholder="Search"> -->
     <nav class="main-nav">
       <ul class="main-nav-list flex clean-list">
         <li><a href="#">Memes</a></li>
@@ -30,7 +30,6 @@
   </aside>
   <main>
     <div class="gallery-layout gallery">
-      <img src="img/1.jpg" alt="">
     </div>
     <div class="canvas-container">
       <h3 class="canvas-title"></h3>
@@ -38,7 +37,6 @@
       <div class="canvas-actions">
         <div class="text-actions">
           <div class="font-family">
-            <label for="font-family">Font Family:</label>
             <select name="font-family" id="font-family">
               <option value="arial">Arial</option>
               <option value="poppins">Poppins</option>
@@ -46,8 +44,7 @@
             </select>
           </div>
           <div class="font-size">
-            <label for="font-size">Font Size:</label>
-            <select name="font-size" id="font-size">
+            <select name="font-size" id="font-size" onchange="getFontSize()">
               <option value="10">10</option>
               <option value="12">12</option>
               <option value="11">11</option>
@@ -77,7 +74,12 @@
         </div>
         <div class="text-input">
           <input type="text" placeholder="Enter a text">
+          <button onclick="getTxtInput()">Submit</button>
         </div>
+        <div class="color-picker">
+          <input type="color" onchange="getColorInput()">
+        </div>
+        <a href="#" class="btn" onclick="downloadImg(this)" download="my-img.jpg">Download as jpeg</a>
       </div>
     </div>
   </main>

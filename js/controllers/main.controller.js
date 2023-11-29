@@ -10,5 +10,12 @@ function onInit() {
 
   gElCanvas = document.querySelector('canvas')
   gElCtx = gElCanvas.getContext('2d')
+  console.log('gElCtx', gElCtx)
 
 }
+
+function downloadImg(elLink) {
+  const imgContent = gElCanvas.toDataURL('image/jpeg') // image/jpeg the default format
+  elLink.href = imgContent
+}
+

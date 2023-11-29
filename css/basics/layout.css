@@ -6,20 +6,10 @@
   grid-template-rows: auto 1fr auto; /* Header, Main, and Footer */
 }
 
- /* .main-layout > *:not(.full) {
-  grid-column: 2;
-} */
-
-
 .main-layout > *.full {
   grid-column: 1 / -1;
 }
 
-/* HEADER LAYOUT */
-
-/* .main-header {
-  grid-column: 1 / -1;
-} */
 
 /* SIDE BAR LAYOUT */
 .main-side-bar {
@@ -58,8 +48,3 @@
 .canvas-actions {
   grid-column: 2;
 }
-
-/* FOOTER LAYOUT */
-/* .footer-layout {
-  grid-column: 1 / -1;
-} */

@@ -20,6 +20,11 @@
   justify-content: center;
 }
 
+/* GRID HELPERS */
+.grid {
+  display: grid;
+}
+
 /* LIST HELPERS */
 
 .clean-list {

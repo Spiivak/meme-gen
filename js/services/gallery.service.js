@@ -91,8 +91,31 @@ var gImgs = [
     url: 'assets/img/18.jpg',
     keywords: ['funny', 'cat']
   },
-  
-
+  {
+    id: 13,
+    url: 'assets/img/13.jpg',
+    keywords: ['funny', 'cat']
+  },
+  {
+    id: 14,
+    url: 'assets/img/14.jpg',
+    keywords: ['funny', 'cat']
+  },
+  {
+    id: 15,
+    url: 'assets/img/15.jpg',
+    keywords: ['funny', 'cat']
+  },
+  {
+    id: 16,
+    url: 'assets/img/16.jpg',
+    keywords: ['funny', 'cat']
+  },
+  {
+    id: 17,
+    url: 'assets/img/17.jpg',
+    keywords: ['funny', 'cat']
+  },
 ]
 
 function getImagesToShow() {

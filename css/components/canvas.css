@@ -4,6 +4,11 @@
   padding: 32px;
 }
 
+.canvas-actions {
+  background-color: green;
+  
+}
+
 canvas {
   background-color: #fff;
   border: 1px solid black;

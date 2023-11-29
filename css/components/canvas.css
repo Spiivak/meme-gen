@@ -1,0 +1,10 @@
+.canvas-container {
+  background-color: lightgoldenrodyellow;
+  border: 1px solid black;
+  padding: 32px;
+}
+
+canvas {
+  background-color: #fff;
+  border: 1px solid black;
+}

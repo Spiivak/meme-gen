@@ -30,13 +30,15 @@
   grid-auto-rows: 160px;
   grid-gap: 10px;
   grid-auto-flow: dense;
-  height: 100vh;
+}
+
+.canvas-container {
+  grid-area: main;
 }
 
 .footer-layout {
   display: grid;
   grid-area: footer;
-  background-color: blue;
 }
 
 

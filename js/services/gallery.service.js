@@ -51,6 +51,48 @@ var gImgs = [
     url: 'img/10.jpg',
     keywords: ['funny', 'cat']
   },
+  {
+    id: 11,
+    url: 'img/11.jpg',
+    keywords: ['funny', 'cat']
+  },
+  {
+    id: 12,
+    url: 'img/12.jpg',
+    keywords: ['funny', 'cat']
+  },
+  {
+    id: 13,
+    url: 'img/13.jpg',
+    keywords: ['funny', 'cat']
+  },
+  {
+    id: 14,
+    url: 'img/14.jpg',
+    keywords: ['funny', 'cat']
+  },
+  {
+    id: 15,
+    url: 'img/15.jpg',
+    keywords: ['funny', 'cat']
+  },
+  {
+    id: 16,
+    url: 'img/16.jpg',
+    keywords: ['funny', 'cat']
+  },
+  {
+    id: 17,
+    url: 'img/17.jpg',
+    keywords: ['funny', 'cat']
+  },
+  {
+    id: 18,
+    url: 'img/18.jpg',
+    keywords: ['funny', 'cat']
+  },
+  
+
 ]
 
 function getImagesToShow() {

@@ -1,9 +1,12 @@
 .gallery-layout {
   padding: 32px;
+  background-color: yellow;
 }
 
 .gallery-layout img {
   border-radius: 8px;
+  cursor: pointer;
+
   transition: scale 0.4s;
 }
 

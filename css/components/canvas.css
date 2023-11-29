@@ -1,66 +1,18 @@
 .canvas-container {
-  padding: 32px;
+  /* padding: 32px; */
   /* background-color: purple; */
   display: flex;
 
   width: 100vw;
   height: calc(100vh - 65px - 40px);
   margin: auto;
-
-
 }
 
-.canvas-actions {
-  margin-left: 16px;
-  background-color: whitesmoke;
-  height: 100%;
-  width: 100%;
-
-  padding: 32px;
-}
-
-.go-back {
-  /* font-family: roboto-medium; */
-  font-size: 14px;
-  line-height: 16.41px;
-  color: #989898;
-  /* align-items: center; */
-
-  position: absolute;
-  top: 96px;
-  left: 32px;
-  
-  cursor: pointer;
-}
-
-.go-back:hover {
-  color: var(--primaryClr);
-  font-family: roboto-medium;
-}
-
-.edit-text {
-  color: #727272;
-  /* background-color: red; */
-  align-items: center;
-}
-
-.edit-text-actions {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.edit-text-title {
-  align-content: center;
-  font-family: roboto-medium;
-  font-size: 24px;
-  line-height: 28.13px;
-  color: #727272;
-}
 
 canvas {
   /* width: 100%; */
   display: flex;
   background-color: #fff;
-  border: 1px solid black;
+  border-radius: 24px;
+  /* border: 1px solid black; */
 }

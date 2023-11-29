@@ -28,7 +28,11 @@ function goBack() {
 
   // Add Hide
   document.querySelector('.canvas-container').classList.add('hide')
+}
 
 
+function openColorPicker() {
+  const colorPicker = document.getElementById('colorPicker');
+  colorPicker.click();
 }
 

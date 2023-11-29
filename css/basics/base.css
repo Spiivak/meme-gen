@@ -8,22 +8,12 @@ html {
   color: var(--ClrPriamyText);
   line-height: 1.714;
   /* overflow-x: hidden; */
-  /* overflow-y: hidden; */
+  overflow-y: hidden;
 }
 
 body {
   margin: 0;
   font-size: 0.875rem;
-}
-
-h1, h2, h3, h4, h5, h6{
-  margin: 0 0 1rem;
-  line-height: 1.5;
-  font-weight: 400;
-}
-
-h2 {
-  font-size: 2.142em;
 }
 
 img {

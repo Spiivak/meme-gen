@@ -12,6 +12,10 @@
   align-items: center;
 }
 
+.flex.flex-end {
+  align-items: flex-end;
+}
+
 .flex.column {
   flex-direction: column;
 }
@@ -20,6 +24,9 @@
   justify-content: center;
 }
 
+.flex.space-evenly {
+  justify-content: space-evenly;
+}
 .flex.wrap {
   flex-wrap: wrap;
 }
@@ -41,5 +48,5 @@
 /* HIDE */
 
 .hide {
-  display: none;
+  display: none !important;
 }

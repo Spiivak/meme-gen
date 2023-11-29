@@ -42,20 +42,21 @@
       </div>
 
       <!-- Canvas Actions Box -->
-      <div class="canvas-actions flex column">
-
+      <div class="canvas-actions flex column space-between">
+        <div class="main-actions">
+      
         <!-- Top Section, Actions -->
         <div class="edit-text flex space-between align-center">
           <h2 class="edit-text-title">Edit Text Lines</h2>
-          <div class="edit-text-actions flex">
+          <div class="edit-text-actions flex align-center">
             <h3>1/2</h3>
-            <button class="switch-text-line"><img src="assets/icons/switch-text-line.svg"></button>
-            <button class="add-line"><img src="assets/icons/add-line.svg"></button>
-            <button class="remove-line"><img src="assets/icons/remove-line.svg"></button>
+            <button><i class="fa-solid fa-shuffle"></i></button>
+            <button><i class="fa-regular fa-square-plus"></i></button>
+            <button><i class="fa-regular fa-square-minus"></i></button>
           </div>
         </div>
 
-        <div class="text-actions">
+        <div class="text-actions flex space-evenly">
           <div class="font-family">
             <select name="font-family" id="font-family">
               <option value="arial">Arial</option>
@@ -84,12 +85,13 @@
             </select>
           </div>
           <div class="align-text">
-            <button class="btn-align-left"><img src="assets/icons/align-left-solid.svg"></button>
-            <button class="btn-align-center"><img src="assets/icons/align-center-solid.svg"></button>
-            <button class="btn-align-right"><img src="assets/icons/align-right-solid.svg"></button>
+            <button class="btn-align-left"><i class="fa-solid fa-align-left"></i></button>
+            <button class="btn-align-center"><i class="fa-solid fa-align-center"></i></button>
+            <button class="btn-align-right"><i class="fa-solid fa-align-right"></i></button>
           </div>
           <div class="shape">
-            <button class="storke-toggle"><img src="assets/icons/stroke-toggle.svg"></button>
+            <button class="storke-toggle"><img src="assets/icons/A.svg"></button>
+            <button onclick="openColorPicker()" class="storke-toggle"><i class="fa-solid fa-paintbrush"></i></button>
           </div>
         </div>
 
@@ -97,13 +99,24 @@
           <input type="text" placeholder="Enter a text">
           <button onclick="getTxtInput()">Submit</button>
         </div>
-        <div class="color-picker">
-          <input type="color" onchange="getColorInput()">
+        <div class="stickers">
+          <h2>Stickers</h2>
+          <div class="stickers-container"></div>
         </div>
-        <a href="#" class="btn" onclick="downloadImg(this)" download="my-img.jpg">Download as jpeg</a>
+      </div>
+        <div class="download-save-share flex justify-center flex-end">
+          <button><a href="#" class="btn" onclick="downloadImg(this)" download="my-img.jpg">Download</a></button>
+          <button class="save">Save</button>
+          <button class="share">Share</button>
+        </div>
+        
       </div>
   </section>
+  <input type="color" id="colorPicker" class="hide"  onchange="getColorInput()">
+
   <footer class="footer-layout flex justify-center align-center full">Made without ❤️ by Eden Spivak</footer>
+
+  <script src="https://kit.fontawesome.com/1206d36ae0.js" crossorigin="anonymous"></script>
 
   <script src="js/controllers/main.controller.js"></script>
   <script src="js/services/gallery.service.js"></script>

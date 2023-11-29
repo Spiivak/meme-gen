@@ -1,0 +1,23 @@
+.main-header {
+  min-height: 65px;
+  padding: 0 32px;
+  box-shadow: 0px 1px 0px 0px rgba(219, 219, 219, 1);
+}
+
+.main-header .main-nav-list a {
+  color: inherit;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-left: 16px;
+
+  transition: color 0.3s;
+
+  font-family: roboto-medium;
+  line-height: 18.75px;
+}
+
+
+.main-header .main-nav-list a:hover {
+  color: var(--primaryClr);
+  /* text-decoration: underline; */
+}

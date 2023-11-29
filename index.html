@@ -28,13 +28,33 @@
       </ul>
     </nav>
   </aside>
-  <main>
-    <div class="gallery-layout gallery">
+  <section class="gallery-layout gallery-container wrap">
     </div>
-    <div class="canvas-container">
-      <h3 class="canvas-title"></h3>
-      <div class="canvas-object"></div>
-      <div class="canvas-actions">
+  </section>
+
+  <section class="canvas-container flex align-center justify-center hide">
+    <a onclick="goBack()" class="go-back">Back to Gallery</a>
+      <!-- Canvas will be rendered here -->
+      <div class="canvas-main">
+
+        
+        <div class="canvas-object"></div>
+      </div>
+
+      <!-- Canvas Actions Box -->
+      <div class="canvas-actions flex column">
+
+        <!-- Top Section, Actions -->
+        <div class="edit-text flex space-between">
+          <h2 class="edit-text-title">Edit Text Lines</h2>
+          <div class="edit-text-actions flex">
+            <h3>1/2</h3>
+            <button class="switch-text-line"><img src="assets/icons/switch-text-line.svg"></button>
+            <button class="add-line"><img src="assets/icons/add-line.svg"></button>
+            <button class="remove-line"><img src="assets/icons/remove-line.svg"></button>
+          </div>
+        </div>
+
         <div class="text-actions">
           <div class="font-family">
             <select name="font-family" id="font-family">
@@ -72,6 +92,7 @@
             <button class="storke-toggle"><img src="assets/icons/stroke-toggle.svg"></button>
           </div>
         </div>
+
         <div class="text-input">
           <input type="text" placeholder="Enter a text">
           <button onclick="getTxtInput()">Submit</button>
@@ -81,8 +102,7 @@
         </div>
         <a href="#" class="btn" onclick="downloadImg(this)" download="my-img.jpg">Download as jpeg</a>
       </div>
-    </div>
-  </main>
+  </section>
   <footer class="footer-layout flex justify-center align-center full">Made without ❤️ by Eden Spivak</footer>
 
   <script src="js/controllers/main.controller.js"></script>

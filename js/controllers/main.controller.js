@@ -4,7 +4,7 @@ let gElCanvas
 let gElCtx
 
 function onInit() {
-  console.log('hi')
+  // console.log('hi')
   renderCanvas()
   renderGallery()
 
@@ -17,5 +17,18 @@ function onInit() {
 function downloadImg(elLink) {
   const imgContent = gElCanvas.toDataURL('image/jpeg') // image/jpeg the default format
   elLink.href = imgContent
+}
+
+function goBack() {
+  // flashMsg('Are you sure?')
+
+  // Remove Hide
+  document.querySelector('.main-side-bar').classList.remove('hide')
+  document.querySelector('.gallery-container').classList.remove('hide')
+
+  // Add Hide
+  document.querySelector('.canvas-container').classList.add('hide')
+
+
 }
 

@@ -2,7 +2,7 @@
 
 function renderGallery() {
   let images = getImagesToShow()
-  const elGallery = document.querySelector('.gallery')
+  const elGallery = document.querySelector('.gallery-container')
   var strHtml = ''
 
   images.forEach(img => {

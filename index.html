@@ -8,7 +8,7 @@
 </head>
 <body class="main-layout" onload="onInit()">
   <header class="main-header flex space-between align-center">
-    <div class="logo flex"><img src="img/memegen-logo.png" alt="Meme Generator Logo"></div>
+    <div class="logo flex"><img src="assets/memegen-logo.png" alt="Meme Generator Logo"></div>
     <input type="search" placeholder="Search">
     <nav class="main-nav">
       <ul class="main-nav-list flex clean-list">
@@ -35,7 +35,50 @@
     <div class="canvas-container">
       <h3 class="canvas-title"></h3>
       <div class="canvas-object"></div>
-      <div class="canvas-actions"></div>
+      <div class="canvas-actions">
+        <div class="text-actions">
+          <div class="font-family">
+            <label for="font-family">Font Family:</label>
+            <select name="font-family" id="font-family">
+              <option value="arial">Arial</option>
+              <option value="poppins">Poppins</option>
+              <option value="impact">Impact</option>
+            </select>
+          </div>
+          <div class="font-size">
+            <label for="font-size">Font Size:</label>
+            <select name="font-size" id="font-size">
+              <option value="10">10</option>
+              <option value="12">12</option>
+              <option value="11">11</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+              <option value="20">20</option>
+              <option value="24">24</option>
+              <option value="32">32</option>
+              <option value="36">36</option>
+              <option value="40">40</option>
+              <option value="48">48</option>
+              <option value="64">64</option>
+              <option value="96">96</option>
+              <option value="128">128</option>
+            </select>
+          </div>
+          <div class="align-text">
+            <button class="btn-align-left"><img src="assets/icons/align-left-solid.svg"></button>
+            <button class="btn-align-center"><img src="assets/icons/align-center-solid.svg"></button>
+            <button class="btn-align-right"><img src="assets/icons/align-right-solid.svg"></button>
+          </div>
+          <div class="shape">
+            <button class="storke-toggle"><img src="assets/icons/stroke-toggle.svg"></button>
+          </div>
+        </div>
+        <div class="text-input">
+          <input type="text" placeholder="Enter a text">
+        </div>
+      </div>
     </div>
   </main>
   <footer class="footer-layout flex justify-center align-center">Made without ❤️ by Eden Spivak</footer>

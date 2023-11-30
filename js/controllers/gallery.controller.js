@@ -6,13 +6,8 @@ function renderGallery() {
   var strHtml = ''
 
   images.forEach(img => {
-    strHtml += `<img onclick="onSelectImg(this)" src='${img.url}'>`
+    strHtml += `<img onclick="onSelectImg(this)" src='assets/${img.url}'>`
     // console.log('strHtml', strHtml)
   })
   elGallery.innerHTML = strHtml
-}
-
-
-function onSelectImg(elImg) {
-  gCtx.drawImage(elImg, 0, 0, gCanvas.width, gCanvas.height)
-}
+}d

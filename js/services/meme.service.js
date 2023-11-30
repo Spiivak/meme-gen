@@ -35,3 +35,15 @@ function setColorText(color) {
 function setFontSize(size) {
   gMeme.lines[gMeme.selectedLineIdx].size = size
 }
+
+function addLine(txt, color, x, y, size = gElCanvas.width / 11) {
+  gMeme.lines.push()({
+    txt,
+    color,
+    size,
+    x,
+    y,
+  })
+
+  gMeme.selectedLineIdx = gMeme.lines.length - 1
+}

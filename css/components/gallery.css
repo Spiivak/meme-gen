@@ -16,3 +16,18 @@
 .gallery-layout img:hover {
   scale: 1.1;
 }
+
+.upload-box {
+  background-color: red;
+  width: 150px;
+
+  display: flex;
+ flex-direction: column;
+}
+
+.upload-box input[type='file'] {
+  background-color: blue;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+}

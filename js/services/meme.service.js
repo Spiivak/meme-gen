@@ -3,7 +3,7 @@
 const STORAGE_MEMES = 'MemesDB'
 
 let isSecLine = true
-let gMemesDBs
+let gMemeDBs
 
 let gMeme = {
   selectedImgId: 0,
@@ -97,72 +97,7 @@ function deleteLine() {
   if (!gMeme.lines.length) gMeme.selectedLineIdx = - 1
 }
 
-function isLineClicked(pos) {
-  return gMeme.lines.findIndex(line => {
-    const x = line.pos.x
-    const y = line.pos.y
-    const lineHeight = line.size + 20
-    const lineWidth = gCtx.measureText(line.txt).width
-    if (line.align === 'start') {
-      return (pos.x > x &&
-        pos.y > (y - (lineHeight / 2)) &&
-        pos.x < x + lineWidth &&
-        pos.y < (y - (lineHeight / 2)) + lineHeight)
-    } else if (line.align === 'center') {
-      return (pos.x > x - (lineWidth / 2) &&
-        pos.y > (y - (lineHeight / 2)) &&
-        pos.x < x - (lineWidth / 2) + lineWidth &&
-        pos.y < (y - (lineHeight / 2)) + lineHeight)
-    } else if (line.align === 'end') {
-      return (pos.x > x - lineWidth &&
-        pos.y > y - (lineHeight / 2) &&
-        pos.x < x + lineWidth &&
-        pos.y < (y - (lineHeight / 2)) + lineHeight)
-    }
-  })
-}
-
-function setLineDrag(isDrag) {
-  if (gMeme.selectedLineIdx < 0) return;
-  getSelectedLine().isDrag = isDrag;
-}
-
-function moveLine(dx, dy) {
-  getSelectedLine().pos.x += dx;
-  getSelectedLine().pos.y += dy;
-}
-
-function loadMemes() {
-  gMemesDBs = loadFromStorage(STORAGE_MEMES);
-  if (!gMemesDBs) gMemesDBs = [];
-}
-
-function saveMeme(MemeData) {
-  gMemesDBs.push(MemeData);
-  saveToStorage(STORAGE_MEMES, gMemeDBs);
-}
-
-function getMemesDATAs() {
-  return gMemesDBs;
-}
-
-function resetMeme() {
-  gMeme = {
-     selectedImgId: 0,
-     selectedLineIdx: -1,
-     lines: []
-  }
-}
-
-function deleteMeme(savedIdx) {
-  gMemesDATAs.splice(savedIdx, 1);
-  saveToStorage(STORAGE_MEMES, gMemesDBs)
-}
 
 function getSelectedLine() {
-  return gMeme.lines[gMeme.selectedLineIdx]
-}
-
-function setLinesPos(centerX){
-  gMeme.lines.forEach(line => line.pos.x=centerX)
+  return gMeme.lines[gMeme.selectedLineIdx];
 }

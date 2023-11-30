@@ -30,7 +30,7 @@ function renderMeme() {
   const meme = getMeme();
 
   let txt = meme.lines[meme.selectedLineIdx].txt;
-  let txt2 = meme.lines[1].txt;
+
   let fontSize = meme.lines[meme.selectedLineIdx].size;
   let fontColor = meme.lines[meme.selectedLineIdx].color;
 
@@ -39,16 +39,10 @@ function renderMeme() {
   const textWidth = gElCtx.measureText(txt).width
   const x = (gElCanvas.width - textWidth) / 2
 
-  const textWidth2 = gElCtx.measureText(txt2).width
-  const x2 = (gElCanvas.width - textWidth2) / 2
-  const textHeight2 = fontSize
-  const y2 = gElCanvas.height - textHeight2
 
   gElCtx.fillStyle = `${fontColor}`
-  // gElCtx.clearRect(x, 50 - fontSize, textWidth, fontSize + 5);
   gElCtx.drawImage(gImg, 0, 0, gElCanvas.width, gElCanvas.height)
   gElCtx.fillText(txt, x, 50)
-  gElCtx.fillText(txt2, x2, y2)
 
 }
 
@@ -69,5 +63,40 @@ function getColorInput() {
 function getFontSize(){
   const size = document.getElementById('font-size').value
   setFontSize(size)
+  renderMeme()
+}
+
+
+function onAddText() {
+  addLine()
+  console.log('hi')
+}
+
+
+function getElImgById(imgId) {
+  return document.querySelector(`[src="assets/img/${imgId}.jpg"]`)
+}
+
+function getEvPos(ev) {
+  var pos = {
+     x: ev.offsetX,
+     y: ev.offsetY
+  }
+  if (gTouchEvs.includes(ev.type)) {
+     ev.preventDefault()
+     var rect = ev.target.getBoundingClientRect()
+     var x = ev.targetTouches[0].pageX - rect.left
+     var y = ev.targetTouches[0].pageY - rect.top
+     pos = { x, y }
+  }
+  return pos
+}
+
+
+function resizeCanvas() {
+  var elContainer = document.querySelector('.canvas-container')
+  gCanvas.width = elContainer.offsetWidth
+  gCanvas.height = gCanvas.width/gAspectRatio
+  setLinesPos(gCanvas.width/2)
   renderMeme()
 }

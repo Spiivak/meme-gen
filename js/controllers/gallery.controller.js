@@ -10,4 +10,4 @@ function renderGallery() {
     // console.log('strHtml', strHtml)
   })
   elGallery.innerHTML = strHtml
-}d
+}
